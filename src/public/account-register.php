@@ -13,7 +13,8 @@ if(isset($_POST["account-register"])){
               echo '</script>';
          } else {
               $password = crypt($password);
-              $stmt = $connection->prepare("INSERT INTO users (username, password, email) VALUES (?, ?, ?)");
+              $stmt = $connection->prepare(
+                      "INSERT INTO users (username, password, email) VALUES (?, ?, ?)");
               $stmt->bind_param('sss', $username, $password, $email);
               $stmt->execute();
               echo '<script language="javascript">';
