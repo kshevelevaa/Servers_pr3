@@ -10,15 +10,6 @@ if (isset($_POST["id"]) && !empty($_POST["id"])) {
     } else {
         echo "Error deleting record: " . $conn->error;
     }
-//    $query_result = $conn->query("SELECT * FROM animals WHERE ID='$id'");
-//    $result = $query_result->fetch_row();
-//    if (!empty($result)) {
-//        $query_result = $conn->query("DELETE FROM animals WHERE ID='$id'");
-//        echo "success lalala";
-//    } else {
-//        echo "Something went wrong.Mistake 1.";
-//    }
-//    $query = mysqli_query($conn, "DELETE FROM animals WHERE ID = '$id'");
     mysqli_close($conn);
 } else {
     if (empty(trim($_GET["id"]))) {

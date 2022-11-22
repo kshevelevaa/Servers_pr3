@@ -1,7 +1,5 @@
 <?php
-
 $conn = new mysqli( "MYSQL", "user", "password", "appDB");
-
 $nickname = $category = $age = "";
 $nickname_error = $category_error = $age_error = "";
 
